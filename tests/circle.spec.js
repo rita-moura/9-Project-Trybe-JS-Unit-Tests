@@ -36,7 +36,7 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
     // Teste se dentro do objeto retornado, a função retorna uma `key` com `value` igual à circunferência correta para um círculo de raio 2.
     expect(Object.values(circle(2))[2]).toBeCloseTo(12.56);
     // Teste se dentro do objeto retornado, a função retorna uma `key` com `value` igual à área correta para um círculo de raio 3.
-    expect(Object.values(circle(3))[2]).toBeCloseTo(28.26);
+    expect(Object.values(circle(3))[1]).toBeCloseTo(28.26);
     // Teste se a função retorna, em um objeto, os dados corretos de um círculo de raio 3.
     const radiusthree = {
       radius: 3, 
