@@ -40,7 +40,8 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
     // Teste se o array retornado pela função contém dois itens dentro.
     expect(productDetails().length).toBe(2);
     // Teste se os dois itens dentro do array retornado pela função são objetos.
-    expect(typeof productDetails()).toBe('object');
+    expect(typeof productDetails('pipoca', 'chocolate')[0]).toBe('object');
+    expect(typeof productDetails('pipoca', 'chocolate')[1]).toBe('object');
     // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
     const product = productDetails('pipoca', 'chocolate');
     const object = Object.values(product)[0].name !== Object.values(product)[1].name;
