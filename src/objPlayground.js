@@ -42,13 +42,21 @@ const calculator = (number1, number2) => {
   return {
     sum: operationSum, 
     mult: operationMult, 
-    div: operationDiv, 
+    div: Math.floor(operationDiv), 
     sub: operationSub,
   };
 };
-console.log(calculator(2, 2));
-const arrayGenerator = (type, object) => {
 
+const arrayGenerator = (type, object) => {
+  if (type === 'keys') {
+    return Object.keys(object);
+  }
+  if (type === 'values') {
+    return Object.values(object);
+  }
+  if (type === 'entries') {
+    return Object.entries(object);
+  }
 };
 
 module.exports = { calculator, arrayGenerator };
