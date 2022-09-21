@@ -20,9 +20,7 @@ const createStudent = (string) => {
     nome: string,
     feedback: () => 'Eita pessoa boa!',
   };
-  if (typeof string === 'string' && student.feedback() === 'Eita pessoa boa!') {
-    return student;
-  }
+  return student;
 };
-/* console.log(createStudent('Leandrão, o Lobo Solitário', createStudent().feedback())); */
+/* console.log(createStudent('Leandrão, o Lobo Solitário', createStudent().feedback()); */
 module.exports = createStudent;
