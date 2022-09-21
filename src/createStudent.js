@@ -16,14 +16,13 @@
 */
 
 const createStudent = (string) => {
-  const estudante = {
+  const student = {
     nome: string,
-    feedback: () => {
-      'Eita pessoa boa!';
-    },
+    feedback: () => 'Eita pessoa boa!',
+  };
+  if (typeof string === 'string' && student.feedback() === 'Eita pessoa boa!') {
+    return student;
+  }
 };
-  return estudante;
-};
-
-/* console.log(createStudent('Leandrão, o Lobo Solitário', 'Eita pessoa boa!')); */
+/* console.log(createStudent('Leandrão, o Lobo Solitário', createStudent().feedback())); */
 module.exports = createStudent;
